@@ -23,8 +23,11 @@ async def make_nws_request(url: str) -> dict[str, Any] | None:
             response = await client.get(url, headers=headers, timeout=30.0)
             response.raise_for_status()
             return response.json()
-        except Exception:
-            return None
+        except httpx.RequestError as e:
+            logging.error(f"Request error while fetching {url}: {e}")
+        except httpx.HTTPStatusError as e:
+            logging.error(f"HTTP status error while fetching {url}: {e.response.status_code} - {e.response.text}")
+        return None
 
 def format_alert(feature: dict) -> str:
     """Format an alert feature into a readable string."""
