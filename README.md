@@ -1,2 +1,2 @@
-# template-default-python-project
-Template for a GitHub Python project
+# mcp-anthropic-test
+Test project for desktop Claude MCP API

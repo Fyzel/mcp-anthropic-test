@@ -1,3 +1,13 @@
-# Index
+# Anthropic Model Context Protocol (MCP)
 
-Hi there.
+## Background
+
+### Claude Desktop User
+
+https://modelcontextprotocol.io/quickstart/user 
+
+### Claude Server API
+
+https://modelcontextprotocol.io/quickstart/server
+
+
