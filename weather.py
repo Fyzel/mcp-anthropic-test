@@ -1,3 +1,8 @@
+"""
+This module provides tools for interacting with the National Weather Service (NWS) API.
+It includes functionality to fetch weather alerts and forecasts for specific locations.
+"""
+
 from typing import Any
 
 import httpx
@@ -24,8 +29,14 @@ async def make_nws_request(url: str) -> dict[str, Any] | None:
             response = await client.get(url, headers=headers, timeout=30.0)
             response.raise_for_status()
             return response.json()
-        except Exception:
+        except RuntimeError:
             return None
+        except httpx.TimeoutException:
+            return None  # Handle timeout errors
+        except httpx.RequestError:
+            return None  # Handle network-related errors
+        except httpx.HTTPStatusError:
+            return None  # Handle HTTP status errors
 
 
 def format_alert(feature: dict) -> str:
