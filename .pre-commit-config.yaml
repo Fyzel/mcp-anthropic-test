@@ -19,12 +19,12 @@ repos:
         - id: destroyed-symlinks
         - id: detect-private-key
         - id: double-quote-string-fixer
-        - id: end-of-file-fixer
+        # - id: end-of-file-fixer
         - id: file-contents-sorter
         - id: name-tests-test
         - id: no-commit-to-branch
         - id: pretty-format-json
-        - id: requirements-txt-fixer
+        #- id: requirements-txt-fixer
         - id: sort-simple-yaml
         - id: trailing-whitespace
 - repo: https://github.com/asottile/pyupgrade
