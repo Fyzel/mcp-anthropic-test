@@ -1,3 +1,8 @@
+"""
+This module provides tools for interacting with the National Weather Service (NWS) API.
+It includes functionality to fetch weather alerts and forecasts for specific locations.
+"""
+
 from typing import Any
 
 import httpx
