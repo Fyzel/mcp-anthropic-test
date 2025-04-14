@@ -1,16 +1,17 @@
-name: build
+name: Trivy
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
+  workflow_dispatch:
 jobs:
   build:
     permissions:
       contents: read
       pull-requests: write
     name: Build
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
