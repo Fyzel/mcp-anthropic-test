@@ -14,8 +14,6 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("weather")
 
 # Constants
-API_KEY = '9f085257-0f9b-4b89-b0bd-a15f11ccd3b5'
-GH_PAT = 'ghp_jYduj5wNnrv9FxgoqGhWfLpY5ESxzx49n1A2'
 NWS_API_BASE = "https://api.weather.gov"
 USER_AGENT = "weather-app/1.0"
 
